@@ -1,3 +1,22 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Tianya's Createtime</title><link>https://tianya778.github.io</link><description>未经反思的人生是不值得过的。</description><copyright>Tianya's Createtime</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://tianya778.github.io</link></image><lastBuildDate>Mon, 15 Apr 2024 06:48:18 +0000</lastBuildDate><managingEditor>Tianya's Createtime</managingEditor><ttl>60</ttl><webMaster>Tianya's Createtime</webMaster><item><title>启笔</title><link>https://tianya778.github.io/post/qi-bi.html</link><description>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;这个博客的搭建其实出于一个误会：我误以为由于我的博客的文章中一些有些不恰当的内容被清退，于是我开始思考，博客到底是写给谁看的？&lt;br&gt;&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Tianya's Createtime</title><link>https://tianya778.github.io</link><description>未经反思的人生是不值得过的。</description><copyright>Tianya's Createtime</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://tianya778.github.io</link></image><lastBuildDate>Mon, 15 Apr 2024 06:59:38 +0000</lastBuildDate><managingEditor>Tianya's Createtime</managingEditor><ttl>60</ttl><webMaster>Tianya's Createtime</webMaster><item><title>python编程——从入门到实践笔记</title><link>https://tianya778.github.io/post/python-bian-cheng-%E2%80%94%E2%80%94-cong-ru-men-dao-shi-jian-bi-ji.html</link><description>&#13;
+## 第二章 变量和简单数据类型&#13;
+&#13;
+‍&#13;
+&#13;
+### 变量的命名和使用注意事项：&#13;
+&#13;
+* 慎用小写字母l和大写字母O,因为容易被看错成数字&#13;
+* 变量名中，最好避免使用大写字母&#13;
+&#13;
+‍&#13;
+&#13;
+变量错误通常意味着两种情况：&#13;
+&#13;
+1. 要么是使用变量前忘记赋值&#13;
+2. 要么就是输入变量名字的时候拼写不正确&#13;
+&#13;
+‍&#13;
+&#13;
+在做p23页的动手练习的时候，发现vscode的shift + enter运行代码会报错，需要放到命令行里面去运行才正常，额，先随着它吧。</description><guid isPermaLink="true">https://tianya778.github.io/post/python-bian-cheng-%E2%80%94%E2%80%94-cong-ru-men-dao-shi-jian-bi-ji.html</guid><pubDate>Mon, 15 Apr 2024 06:59:12 +0000</pubDate></item><item><title>启笔</title><link>https://tianya778.github.io/post/qi-bi.html</link><description>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;这个博客的搭建其实出于一个误会：我误以为由于我的博客的文章中一些有些不恰当的内容被清退，于是我开始思考，博客到底是写给谁看的？&lt;br&gt;&#13;
 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;我感觉之前的博客对我来说是一种束缚，所以我决定重新开始，开始没有任何束缚的创作。</description><guid isPermaLink="true">https://tianya778.github.io/post/qi-bi.html</guid><pubDate>Mon, 15 Apr 2024 04:39:47 +0000</pubDate></item></channel></rss>

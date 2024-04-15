@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html data-color-mode="light" data-dark-theme="dark" data-light-theme="light" lang="zh-CN">
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="//cdn.staticfile.net/Primer/21.0.7/primer.css" rel="stylesheet" />
+    <link rel="icon" href="https://github.githubassets.com/favicons/favicon.svg"><script>
+        let theme = localStorage.getItem("meek_theme") || "light";
+        document.documentElement.setAttribute("data-color-mode", theme);
+    </script>
+<meta name="description" content="python编程——从入门到实践笔记">
+<title>python编程——从入门到实践笔记</title>
+<link href="//unpkg.com/@wooorm/starry-night@2.1.1/style/both.css" rel="stylesheet" />
+
+</head>
+<style>
+body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;padding: 45px;font-size: 16px;font-family: sans-serif;line-height: 1.25;}
+#header{display:flex;padding-bottom:8px;border-bottom: 1px solid var(--borderColor-muted, var(--color-border-muted));margin-bottom: 16px;}
+#footer {margin-top:64px; text-align: center;font-size: small;}
+
+</style>
+
+<style>
+.postTitle{margin: auto 0;font-size:40px;font-weight:bold;}
+.title-right{display:flex;margin:auto 0 0 auto;}
+.title-right .circle{padding: 14px 16px;margin-right:8px;}
+#postBody{border-bottom: 1px solid var(--color-border-default);padding-bottom:36px;}
+#postBody hr{height:2px;}
+#cmButton{height:48px;margin-top:48px;}
+#comments{margin-top:64px;}
+.g-emoji{font-size:24px;}
+@media (max-width: 600px) {
+    body {padding: 8px;}
+    .postTitle{font-size:24px;}
+}
+</style>
+
+
+
+
+<body>
+    <div id="header">
+<h1 class="postTitle">python编程——从入门到实践笔记</h1>
+<div class="title-right">
+    <a href="https://tianya778.github.io" id="buttonHome" class="btn btn-invisible circle" title="首页">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathHome" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
+    <a href="https://github.com/tianya778/tianya778.github.io/issues/3" target="_blank" class="btn btn-invisible circle" title="Issue">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathIssue" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
+
+    <a class="btn btn-invisible circle" onclick="modeSwitch();" title="切换主题">
+        <svg class="octicon" width="16" height="16" >
+            <path id="themeSwitch" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+
+</div>
+</div>
+    <div id="content">
+<div class="markdown-body" id="postBody"><h2>第二章 变量和简单数据类型</h2>
+<p>‍</p>
+<h3>变量的命名和使用注意事项：</h3>
+<ul>
+<li>慎用小写字母l和大写字母O,因为容易被看错成数字</li>
+<li>变量名中，最好避免使用大写字母</li>
+</ul>
+<p>‍</p>
+<p>变量错误通常意味着两种情况：</p>
+<ol>
+<li>要么是使用变量前忘记赋值</li>
+<li>要么就是输入变量名字的时候拼写不正确</li>
+</ol>
+<p>‍</p>
+<p>在做p23页的动手练习的时候，发现vscode的shift + enter运行代码会报错，需要放到命令行里面去运行才正常，额，先随着它吧。</p>
+<p>‍</p>
+<h3>数字</h3>
+<p>使用数字的时候，就要注意适当时候使用<code class="notranslate">str()</code>​避免类型错误</p>
+<p>拼接的字符串的时候需要<code class="notranslate">str()</code>​</p>
+<p>‍</p>
+<h2>第三章 列表简介</h2>
+<h3>修改、添加、删除元素</h3>
+<p>修改：指定好序列位置，然后直接赋值替换</p>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">motorcycles</span> <span class="pl-c1">=</span> [<span class="pl-s">"honda"</span>,<span class="pl-s">"yamaha"</span>,<span class="pl-s">"suzuki"</span>]
+
+<span class="pl-s1">motorcycles</span>[<span class="pl-c1">0</span>] <span class="pl-c1">=</span> <span class="pl-s">"ducati"</span>
+<span class="pl-en">print</span>(<span class="pl-s1">motorcycles</span>)
+
+[<span class="pl-s">"ducati"</span>,<span class="pl-s">"yamaha"</span>,<span class="pl-s">"suzuki"</span>]</pre></div>
+<p>‍</p>
+<p>添加：</p>
+<p>从列表末尾添加 <code class="notranslate">append( )</code>​</p>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">motorcycles</span> <span class="pl-c1">=</span> [<span class="pl-s">"honda"</span>,<span class="pl-s">"yamaha"</span>,<span class="pl-s">"suzuki"</span>]
+<span class="pl-s1">motorcycles</span>.<span class="pl-en">append</span>(<span class="pl-s">"ducati"</span>) <span class="pl-c">#从列表末尾添加</span>
+<span class="pl-en">print</span>(<span class="pl-s1">motorcycles</span>)
+
+[<span class="pl-s">"honda"</span>,<span class="pl-s">"yamaha"</span>,<span class="pl-s">"suzuki"</span>,<span class="pl-s">"ducati"</span>]</pre></div>
+<p>从任意位置添加<code class="notranslate">insert( )</code>​</p>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">motorcycles</span> <span class="pl-c1">=</span> [<span class="pl-s">"honda"</span>,<span class="pl-s">"yamaha"</span>,<span class="pl-s">"suzuki"</span>]
+<span class="pl-s1">motorcycles</span>.<span class="pl-en">insert</span>(<span class="pl-c1">1</span>,<span class="pl-s">"ducati"</span>)
+<span class="pl-en">print</span>(<span class="pl-s1">motorcycles</span>)
+
+[<span class="pl-s">"honda"</span>,<span class="pl-s">"ducati"</span>,<span class="pl-s">"yamaha"</span>,<span class="pl-s">"suzuki"</span>]</pre></div>
+<p>‍</p>
+<p>删除：</p>
+<ul>
+<li>使用del语句删除元素（需要知道具体的位置（序列））<br>
+删除后<strong>无法再访问</strong></li>
+</ul>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">motorcycles</span> <span class="pl-c1">=</span> [<span class="pl-s">'honda'</span>, <span class="pl-s">'yamaha'</span>, <span class="pl-s">'suzuki'</span>] 
+<span class="pl-k">del</span> <span class="pl-s1">motorcycles</span>[<span class="pl-c1">1</span>]
+<span class="pl-en">print</span>(<span class="pl-s1">motorcycles</span>)
+
+[<span class="pl-s">"honda"</span>,<span class="pl-s">"suzuki"</span>]</pre></div>
+<p>‍</p>
+<ul>
+<li>使用方法<code class="notranslate">pop()</code>​删除元素  <strong>（默认删除尾，也可指定索引）</strong><br>
+方法pop删除之后，单独删除的那个元素还可以再拿来使用的</li>
+</ul>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">motorcycles</span> <span class="pl-c1">=</span> [<span class="pl-s">'honda'</span>, <span class="pl-s">'yamaha'</span>, <span class="pl-s">'suzuki'</span>]  
+<span class="pl-s1">popped_motorcycle</span> <span class="pl-c1">=</span> <span class="pl-s1">motorcycles</span>.<span class="pl-en">pop</span>() 
+<span class="pl-en">print</span>(<span class="pl-s1">motorcycles</span>)
+<span class="pl-en">print</span>(<span class="pl-s1">popped_motorcycle</span>)
+
+[<span class="pl-s">'honda'</span>, <span class="pl-s">'yamaha'</span> ]
+<span class="pl-s1">suzuki</span>
+
+
+<span class="pl-c"># 下面是指定索引的用法</span>
+<span class="pl-s1">motorcycles</span> <span class="pl-c1">=</span> [<span class="pl-s">'honda'</span>, <span class="pl-s">'yamaha'</span>, <span class="pl-s">'suzuki'</span>] 
+<span class="pl-s1">first_owned</span> <span class="pl-c1">=</span> <span class="pl-s1">motorcycles</span>.<span class="pl-en">pop</span>(<span class="pl-c1">0</span>)
+<span class="pl-en">print</span>(<span class="pl-s1">motorcycles</span>)
+<span class="pl-en">print</span>(<span class="pl-s1">first_owned</span>)
+
+[<span class="pl-s">'yamaha'</span>, <span class="pl-s">'suzuki'</span>] 
+<span class="pl-s1">honda</span></pre></div>
+<ul>
+<li>根据值删除元素，使用方法<code class="notranslate">remove()</code>​（知道值不知道位置）</li>
+</ul>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">motorcycles</span> <span class="pl-c1">=</span> [<span class="pl-s">'honda'</span>, <span class="pl-s">'yamaha'</span>, <span class="pl-s">'suzuki'</span>, <span class="pl-s">'ducati'</span>] 
+<span class="pl-en">print</span>(<span class="pl-s1">motorcycles</span>) 
+ 
+[<span class="pl-s">'honda'</span>, <span class="pl-s">'yamaha'</span>, <span class="pl-s">'suzuki'</span>, <span class="pl-s">'ducati'</span>]
+
+<span class="pl-s1">motorcycles</span>.<span class="pl-en">remove</span>(<span class="pl-s">'ducati'</span>) 
+<span class="pl-en">print</span>(<span class="pl-s1">motorcycles</span>)
+[<span class="pl-s">'honda'</span>, <span class="pl-s">'yamaha'</span>, <span class="pl-s">'suzuki'</span>]</pre></div>
+<p>使用<code class="notranslate">remove()</code>​删除元素后，也和<code class="notranslate">pop()</code>​一样，可以接着使用它的值<br>
+并且，方法<code class="notranslate">remove()</code>​要注意的是：<strong>它只删除第一个指定的值，并不是批量删除！</strong></p>
+<p>‍</p>
+<h3>组织列表</h3>
+<p><strong>方法</strong>​<code class="notranslate">sort()</code>​以字母排序，对列表进行永久性排序；<br>
+还可以反向排序<code class="notranslate">sort(reverse=True)</code>​</p>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">cars</span> <span class="pl-c1">=</span> [<span class="pl-s">'bmw'</span>, <span class="pl-s">'audi'</span>, <span class="pl-s">'toyota'</span>, <span class="pl-s">'subaru'</span>]
+<span class="pl-s1">cars</span>.<span class="pl-en">sort</span>()
+<span class="pl-en">print</span>(<span class="pl-s1">cars</span>)
+[<span class="pl-s">'audi'</span>, <span class="pl-s">'bmw'</span>, <span class="pl-s">'subaru'</span>, <span class="pl-s">'toyota'</span>] <span class="pl-c">#永久更改</span>
+
+<span class="pl-s1">cars</span>.<span class="pl-en">sort</span>(<span class="pl-s1">reverse</span><span class="pl-c1">=</span><span class="pl-c1">True</span>)
+<span class="pl-en">print</span>(<span class="pl-s1">cars</span>)
+[<span class="pl-s">'toyota'</span>, <span class="pl-s">'subaru'</span>, <span class="pl-s">'bmw'</span>, <span class="pl-s">'audi'</span>] <span class="pl-c"># 使用颠倒后，变成倒序</span></pre></div>
+<p>‍</p>
+<p>使用<strong>函数</strong>​<code class="notranslate">sorted()</code>​对列表进行临时排序<br>
+反向排序的话操作是一样的</p>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">cars</span> <span class="pl-c1">=</span> [<span class="pl-s">'bmw'</span>, <span class="pl-s">'audi'</span>, <span class="pl-s">'toyota'</span>, <span class="pl-s">'subaru'</span>]
+<span class="pl-en">print</span>(<span class="pl-en">sorted</span>(<span class="pl-s1">cars</span>))
+[<span class="pl-s">'audi'</span>, <span class="pl-s">'bmw'</span>, <span class="pl-s">'subaru'</span>, <span class="pl-s">'toyota'</span>]
+
+<span class="pl-en">print</span>(<span class="pl-s1">cars</span>)
+[<span class="pl-s">'bmw'</span>, <span class="pl-s">'audi'</span>, <span class="pl-s">'toyota'</span>, <span class="pl-s">'subaru'</span>]</pre></div>
+<p>使用方法<code class="notranslate">reserve()</code>​可以倒着打印列表，并且还可以在颠倒回来</p>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">cars</span> <span class="pl-c1">=</span> [<span class="pl-s">'bmw'</span>, <span class="pl-s">'audi'</span>, <span class="pl-s">'toyota'</span>, <span class="pl-s">'subaru'</span>]
+<span class="pl-s1">cars</span>.<span class="pl-en">reserve</span>()
+<span class="pl-en">print</span>(<span class="pl-s1">cars</span>)
+[<span class="pl-s">'bmw'</span>, <span class="pl-s">'audi'</span>, <span class="pl-s">'toyota'</span>, <span class="pl-s">'subaru'</span>]</pre></div>
+<p>使用函数<code class="notranslate">len()</code>​可快速获取列表的长度</p>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">cars</span> <span class="pl-c1">=</span> [<span class="pl-s">'bmw'</span>, <span class="pl-s">'audi'</span>, <span class="pl-s">'toyota'</span>, <span class="pl-s">'subaru'</span>]
+<span class="pl-en">len</span>(<span class="pl-s1">cars</span>)
+<span class="pl-c1">4</span></pre></div>
+<p>‍</p>
+<h2>第四章 操作列表</h2>
+<h3>for循环</h3>
+<p>for循环要注意那个冒号<code class="notranslate">:</code>​ ，以及缩进关系：<br>
+缩进了表示从属于上面那个，不缩进就是单独的了。缩进很重要！</p>
+<h3>数值列表</h3>
+<p>函数<code class="notranslate">range()</code>​</p>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">for</span> <span class="pl-s1">value</span> <span class="pl-c1">in</span> <span class="pl-en">range</span>(<span class="pl-c1">1</span>,<span class="pl-c1">6</span>):
+	<span class="pl-en">print</span>(<span class="pl-s1">value</span>)
+<span class="pl-c1">1</span>
+<span class="pl-c1">2</span>
+<span class="pl-c1">3</span>
+<span class="pl-c1">4</span>
+<span class="pl-c1">5</span>
+<span class="pl-c"># 他会少打印一个,也就是输出结果不包含括号内的第二个值</span></pre></div>
+<p>创建数字列表：思路是使用<code class="notranslate">list()</code>​将这些数字转换为列表：</p>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">numbers</span> <span class="pl-c1">=</span> <span class="pl-en">list</span>(<span class="pl-en">range</span>(<span class="pl-c1">1</span>,<span class="pl-c1">6</span>))
+<span class="pl-en">print</span>(<span class="pl-s1">numbers</span>)</pre></div>
+<p>并且<code class="notranslate">range()</code>​可以指定步长：</p>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">even_numbers</span> <span class="pl-c1">=</span> <span class="pl-en">list</span>(<span class="pl-en">range</span>(<span class="pl-c1">2</span>,<span class="pl-c1">11</span>,<span class="pl-c1">2</span>))
+<span class="pl-en">print</span>(<span class="pl-s1">even_numbers</span>)</pre></div>
+<p>找最大最小和求和的函数：</p>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">digits</span> <span class="pl-c1">=</span> [<span class="pl-c1">1</span>,<span class="pl-c1">2</span>,<span class="pl-c1">3</span>,<span class="pl-c1">4</span>,<span class="pl-c1">5</span>,<span class="pl-c1">6</span>]
+<span class="pl-en">min</span>(<span class="pl-s1">digits</span>)
+<span class="pl-en">max</span>(<span class="pl-s1">digits</span>)
+<span class="pl-en">sum</span>(<span class="pl-s1">digits</span>)</pre></div>
+<p>‍</p>
+<h3>列表的一部分：切片</h3>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">players</span> <span class="pl-c1">=</span> [<span class="pl-s">"charles"</span>,<span class="pl-s">"martina"</span>,<span class="pl-s">"michael"</span>,<span class="pl-s">"florence"</span>,<span class="pl-s">"eli"</span>]
+<span class="pl-en">print</span>(<span class="pl-s1">players</span>[<span class="pl-c1">0</span>:<span class="pl-c1">3</span>])</pre></div>
+<p>‍</p>
+<h3>复制列表</h3>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">my_foods</span> <span class="pl-c1">=</span> [<span class="pl-s">"pizza"</span>,<span class="pl-s">"falafel"</span>,<span class="pl-s">"carrot cake"</span>]
+<span class="pl-s1">frind_foods</span> <span class="pl-c1">=</span> <span class="pl-s1">my_foods</span>[:]
+<span class="pl-c"># 这里相当于创建了一个副本</span>
+
+<span class="pl-s1">frind_foods</span> <span class="pl-c1">=</span> <span class="pl-s1">my_foods</span>
+<span class="pl-c"># 这里不能这样用，因为两个列表的数据互通了</span></pre></div>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-en">print</span>(<span class="pl-s1">pizzas</span>[<span class="pl-c1">2</span>:<span class="pl-c1">5</span>]) <span class="pl-c">#中间三个元素</span></pre></div>
+<p>我贼容易把冒号打成逗号</p>
+<p>‍</p>
+<h3>元组</h3>
+<p>元组跟列表的区别就是不能修改，需要重新赋值才能修改</p>
+<p>‍</p>
+<h3>设置代码格式</h3>
+<p>缩进：建议每级缩进使用4个空格；可以使用制表符键，但记得一定要设置成空格，而不是插入制表符。</p>
+<p>行长：</p>
+<ul>
+<li>建议每行不超过80字符</li>
+<li>建议注释的行长不超过72字符</li>
+</ul>
+<p>学习期间就不用考虑了，怎么开心怎么来</p>
+<p>‍</p>
+<h2>第五章 if语句</h2>
+<p>简单示例：</p>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">cars</span> <span class="pl-c1">=</span>[<span class="pl-s">"audi"</span>,<span class="pl-s">"bmw"</span>,<span class="pl-s">"subaru"</span>,<span class="pl-s">"toyota"</span>]
+
+<span class="pl-k">for</span> <span class="pl-s1">car</span> <span class="pl-c1">in</span> <span class="pl-s1">cars</span>:
+	<span class="pl-k">if</span> <span class="pl-s1">car</span> <span class="pl-c1">==</span> <span class="pl-s">"bmw"</span>:
+		<span class="pl-en">print</span>(<span class="pl-s1">car</span>.<span class="pl-en">upper</span>())
+	<span class="pl-k">else</span>:
+		<span class="pl-en">print</span>(<span class="pl-s1">car</span>.<span class="pl-en">title</span>())
+
+<span class="pl-c1">-</span><span class="pl-c1">-</span><span class="pl-c1">-</span><span class="pl-c1">-</span><span class="pl-c1">-</span><span class="pl-c1">-</span>
+<span class="pl-v">Audi</span>
+<span class="pl-v">BMW</span>
+<span class="pl-v">Subaru</span>
+<span class="pl-v">Toyota</span></pre></div>
+<p>‍</p>
+<p>每条if语句的核心都是一个值为True或False的表达式，这种表达式被成为条件测试。</p>
+<p>‍</p>
+<h3>条件测试</h3>
+<p>大多数条件测试都是要将一个“变量”的当前值同特定值进行比较</p>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-c1">&gt;&gt;</span><span class="pl-c1">&gt;</span> <span class="pl-s1">car</span> <span class="pl-c1">=</span> <span class="pl-s">'bmw'</span>
+<span class="pl-c1">&gt;&gt;</span><span class="pl-c1">&gt;</span> <span class="pl-s1">car</span> <span class="pl-c1">==</span> <span class="pl-s">'bmw'</span>
+<span class="pl-c1">-</span><span class="pl-c1">-</span><span class="pl-c1">-</span><span class="pl-c1">-</span><span class="pl-c1">-</span><span class="pl-c1">-</span>
+<span class="pl-s1">true</span></pre></div>
+<p>一个等号是陈述，相当于赋值<br>
+两个等号相当于【发问】</p>
+<p>‍</p>
+<h3>检查是否相等时不考虑大小写：</h3>
+<p>大小写会影响相等，但是如果你不用考虑大小写的话，可以用函数<code class="notranslate">lower()</code>​进行比较，例子：</p>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">car</span> <span class="pl-c1">==</span> <span class="pl-s">"Audi"</span>
+<span class="pl-s1">car</span>.<span class="pl-en">lower</span>() <span class="pl-c1">==</span> <span class="pl-s">"andi"</span>
+<span class="pl-c"># 这里用函数转换为小写，但是没有改变原来的赋值</span></pre></div>
+<p>应用的场景：书上说是确保用户名独一无二，但我感觉平时验证码也是，不用区分大小写一般来说，只需要确认是否输入正确与否。</p>
+<p>‍</p>
+<h3>检查是否不相等</h3>
+<p>这里会用到一个符号：<code class="notranslate">!=</code>​ 其中，叹号表示【不】的意思，就是<strong>不相等</strong>的写法,例子：</p>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">text</span> <span class="pl-c1">=</span> <span class="pl-s">"wodiu"</span>
+<span class="pl-k">if</span> <span class="pl-s1">text</span> <span class="pl-c1">!=</span> <span class="pl-s">"666"</span>:
+	<span class="pl-en">print</span>(<span class="pl-s">"hahaha"</span>)</pre></div>
+<p><strong>编写的大多数条件表达式都是用来检查两个值是否相等</strong></p>
+<p>‍</p>
+<h3>比较数字</h3>
+<p>条件语句中可以包含【小于、小于等于、大于、大于等于】</p>
+<p>‍</p>
+<br>
+<h3>检查多个条件</h3>
+<p>使用and 和 or 来进行检验</p>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">age_0</span> <span class="pl-c1">=</span> <span class="pl-c1">1</span>
+<span class="pl-s1">age_1</span> <span class="pl-c1">=</span> <span class="pl-c1">2</span>
+(<span class="pl-s1">age_0</span> <span class="pl-c1">&gt;=</span> <span class="pl-c1">1</span>) <span class="pl-c1">and</span> (<span class="pl-s1">age_1</span> <span class="pl-c1">&gt;</span> <span class="pl-c1">2</span>)
+
+<span class="pl-s1">age_0</span> <span class="pl-c1">&gt;=</span><span class="pl-c1">1</span> <span class="pl-c1">or</span> <span class="pl-s1">age_1</span> <span class="pl-c1">&gt;</span> <span class="pl-c1">3</span></pre></div>
+<p>‍</p>
+<h3>检查特定值是否在列表中</h3>
+<p>场景：检查用户是否已经注册过</p>
+<p>使用关键字<code class="notranslate">in</code>​ ， 例子：</p>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">friend</span> <span class="pl-c1">=</span> [<span class="pl-s">"lxy"</span>,<span class="pl-s">"tyz"</span>,<span class="pl-s">"jyt"</span>]
+<span class="pl-s">"lxy"</span> <span class="pl-c1">in</span> <span class="pl-s1">friend</span>
+<span class="pl-c1">True</span>
+
+<span class="pl-s">"hfd"</span> <span class="pl-c1">in</span> <span class="pl-s1">frined</span>
+<span class="pl-c1">False</span></pre></div>
+<p>‍</p>
+<h3>if语句</h3>
+<p>if 语句的核心前面已经提到了，是true或者false，也就是符合了就执行后面所进的，不符合就略过。因此缩进的值需要注意。</p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/570e231b78278ed1d9c7d5d012ff98500111f8489a88f489fc9b6f3f813ec313/68747470733a2f2f73322e6c6f6c692e6e65742f323032332f31312f32342f6454456a76793233674d4838634c732e706e67"><img src="https://camo.githubusercontent.com/570e231b78278ed1d9c7d5d012ff98500111f8489a88f489fc9b6f3f813ec313/68747470733a2f2f73322e6c6f6c692e6e65742f323032332f31312f32342f6454456a76793233674d4838634c732e706e67" alt="" data-canonical-src="https://s2.loli.net/2023/11/24/dTEjvy23gMH8cLs.png" style="max-width: 100%;"></a>​</p>
+<p>我们可以看到上面的例子，就是第一个不符合，但是第二个符号，因此便运行了第二个elif后面的缩进。<br>
+这段代码可以优化，优化之后需要更改描述语句就不需要更改三次了：</p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/6ca7c53c72e3804d0a7cdaabd35665fe8816a2297dff20e2915cb90b929c3624/68747470733a2f2f73322e6c6f6c692e6e65742f323032332f31312f32342f6d6a586755645662414261397059792e706e67"><img src="https://camo.githubusercontent.com/6ca7c53c72e3804d0a7cdaabd35665fe8816a2297dff20e2915cb90b929c3624/68747470733a2f2f73322e6c6f6c692e6e65742f323032332f31312f32342f6d6a586755645662414261397059792e706e67" alt="" data-canonical-src="https://s2.loli.net/2023/11/24/mjXgUdVbABa9pYy.png" style="max-width: 100%;"></a>​</p>
+<p>‍</p>
+<p>if语句如果需要使用多个的话形式是不一样的：</p>
+<p>只用一个的话就只需要一个if<br>
+使用两个的话需要if else<br>
+使用三个或者多个的话就是if 不定量个elif 结尾一个else</p>
+<p>省略else代码块<br>
+原来else和elif是有区别的：</p>
+<blockquote>
+<p>else是一条包罗万象的语句，只要不满足任何if或elif中的条件测试，其中的代码就会执行，<br>
+这可能会引入无效甚至恶意的数据。如果知道最终要测试的条件，应考虑使用一个elif代码块来<br>
+代替else代码块。这样，你就可以肯定，仅当满足相应的条件时，你的代码才会执行。</p>
+</blockquote>
+<p>只要前面的不满足,else就会执行，而elif只有当条件满足的时候才会执行。</p>
+<p>‍</p>
+<h3>测试多个条件：</h3>
+<p>if-elif-else结构只适合只有一个条件满足的情况，但如果需要多个条件呢？<br>
+那就使用一系列简单的if语句</p>
+<blockquote>
+<p>总之，如果你只想执行一个代码块，就使用if-elif-else结构；如果要运行多个代码块，就<br>
+使用一系列独立的if语句。</p>
+</blockquote>
+<p>‍</p>
+<h2>第六章 字典</h2>
+<h3>什么是键值对？</h3>
+<p>例子：</p>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">alien_0</span> <span class="pl-c1">=</span> {<span class="pl-s">'color'</span>:<span class="pl-s">'green'</span>,<span class="pl-s">'points'</span>:<span class="pl-c1">5</span>}
+<span class="pl-en">print</span>(<span class="pl-s1">alien_0</span>[<span class="pl-s">'color'</span>]) <span class="pl-c"># 访问字典中的值</span>
+<span class="pl-c"># 如何添加键值对？</span>
+<span class="pl-s1">alien_0</span>[<span class="pl-s">'x_position'</span>] <span class="pl-c1">=</span> <span class="pl-c1">0</span>
+
+<span class="pl-c"># 如何修改键值对？</span>
+<span class="pl-s1">alien_0</span>[<span class="pl-s">'x_position'</span>] <span class="pl-c1">=</span> <span class="pl-c1">1</span></pre></div>
+<p>‍</p>
+<h3>如何删除键值对？</h3>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">alien_0</span> <span class="pl-c1">=</span> {<span class="pl-s">'color'</span>:<span class="pl-s">'green'</span>,<span class="pl-s">'points'</span>:<span class="pl-c1">5</span>}
+
+<span class="pl-k">del</span> <span class="pl-s1">alien_0</span>[<span class="pl-s">'points'</span>]</pre></div>
+<p>‍</p>
+<h3>遍历字典</h3>
+<p>Python支持对字典遍历。<br>
+因此有多种遍历字典的方式：可遍历字典的所有键—值对、键或值。</p>
+<h4>遍历所有的键值对：</h4>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">user_0</span> <span class="pl-c1">=</span> { 
+    <span class="pl-s">'username'</span>: <span class="pl-s">'efermi'</span>, 
+    <span class="pl-s">'first'</span>: <span class="pl-s">'enrico'</span>, 
+    <span class="pl-s">'last'</span>: <span class="pl-s">'fermi'</span>, 
+    } 
+ 
+<span class="pl-k">for</span> <span class="pl-s1">key</span>, <span class="pl-s1">value</span> <span class="pl-c1">in</span> <span class="pl-s1">user_0</span>.<span class="pl-en">items</span>(): 
+    <span class="pl-en">print</span>(<span class="pl-s">"<span class="pl-cce">\n</span>Key: "</span> <span class="pl-c1">+</span> <span class="pl-s1">key</span>) 
+    <span class="pl-en">print</span>(<span class="pl-s">"Value: "</span> <span class="pl-c1">+</span> <span class="pl-s1">value</span>)</pre></div>
+<p>例子中，声明了两个变量，第二部分包含了字典名+方法<code class="notranslate">items()</code>​</p>
+<p>注意，返回的时候顺序会变，python只关心键值的对应关系，不关注返回顺序</p>
+<p>‍</p>
+<h4>遍历所有的键：</h4>
+<p>只需要"键"的时候，使用方法<code class="notranslate">keys()</code>​<br>
+书上的例子在使用keys的时候演示了两种用法：</p>
+<ul>
+<li>指定一个列表，然后把keys的这个列表放进去for循环来匹配if语句</li>
+<li>keys实际上可以返回一个列表，它包含了字典中的所有键，所以可以看你需要检验的值是否在这个列表里</li>
+</ul>
+<p>‍</p>
+<h4>按顺序遍历字典中的所有键：</h4>
+<p>一般情况下是不需要的，但是你要按顺序遍历也不是问题。</p>
+<p>使用<code class="notranslate">for</code>​循环加上函数<code class="notranslate">sorted()</code>​来获得特定顺序排列副本<br>
+​<code class="notranslate">sorted()</code>​是按照字母顺序排序哦。</p>
+<p>‍</p>
+<h4>遍历字典中的所有值：</h4>
+<p>我们使用方法<code class="notranslate">values()</code>​</p>
+<p>使用for循环可以遍历出所有的值，但是如果我们要剔除重合的部分呢？</p>
+<p>那就使用集合（set）</p>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">favorite_languages</span> <span class="pl-c1">=</span> { 
+    <span class="pl-s">'jen'</span>: <span class="pl-s">'python'</span>, 
+    <span class="pl-s">'sarah'</span>: <span class="pl-s">'c'</span>, 
+    <span class="pl-s">'edward'</span>: <span class="pl-s">'ruby'</span>, 
+    <span class="pl-s">'phil'</span>: <span class="pl-s">'python'</span>, 
+    } 
+ 
+<span class="pl-en">print</span>(<span class="pl-s">"The following languages have been mentioned:"</span>) 
+<span class="pl-k">for</span> <span class="pl-s1">language</span> <span class="pl-c1">in</span> <span class="pl-en">set</span>(<span class="pl-s1">favorite_languages</span>.<span class="pl-en">values</span>()): 
+     <span class="pl-en">print</span>(<span class="pl-s1">language</span>.<span class="pl-en">title</span>())</pre></div>
+<p>‍</p>
+<h4>习题错误：</h4>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">or</span> <span class="pl-s1">vocabulary</span>,<span class="pl-s1">connotation</span> <span class="pl-c1">in</span> <span class="pl-s1">program_vocabulary</span>.<span class="pl-en">items</span>():
+    <span class="pl-en">print</span>(<span class="pl-s1">vocabulary</span> <span class="pl-c1">+</span> <span class="pl-s">": "</span> <span class="pl-c1">+</span> <span class="pl-s1">connotation</span> )
+
+<span class="pl-s1">counter_rivers</span> <span class="pl-c1">=</span> {
+    <span class="pl-s">'Yellow River'</span>:<span class="pl-s">'china'</span>,
+    <span class="pl-s">'the Ganges River'</span>:<span class="pl-s">'india'</span>,
+    <span class="pl-s">'Amazon'</span>:<span class="pl-s">'peru'</span>,
+}
+<span class="pl-c"># 傻逼了，我就说运行一直报错，忘记打逗号了</span>
+<span class="pl-k">for</span> <span class="pl-s1">river</span>,<span class="pl-s1">through</span> <span class="pl-c1">in</span> <span class="pl-s1">counter_rivers</span>.<span class="pl-en">items</span>():
+    <span class="pl-en">print</span>(<span class="pl-s">"The "</span> <span class="pl-c1">+</span> <span class="pl-s1">river</span> <span class="pl-c1">+</span> <span class="pl-s">" runs through "</span> <span class="pl-c1">+</span> <span class="pl-s1">through</span> )</pre></div>
+<p>‍</p>
+<h3>嵌套</h3>
+<p>什么是嵌套？<br>
+有时候，需要将一系列字典存储在列表中，或将列表作为值存储在字典中，这称为嵌套。</p>
+<p>‍</p>
+<h2>第七章 用户输入和while循环</h2>
+<h3>使用<code class="notranslate">int()</code>​​来获取数值输入</h3>
+<p>使用<code class="notranslate">input()</code>​后，填入里面的数字是作为字符串，如果要将其作为数值使用的话，需用使用<code class="notranslate">int()</code>​</p>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">height</span> <span class="pl-c1">=</span> <span class="pl-en">input</span>(<span class="pl-s">"How tall are you, in inches? "</span>)
+<span class="pl-s1">height</span> <span class="pl-c1">=</span> <span class="pl-en">int</span>(<span class="pl-s1">height</span>) <span class="pl-c">#这里就把用户输入的数值转换为了可以进行比较的数字啦</span>
+
+<span class="pl-k">if</span> <span class="pl-s1">height</span> <span class="pl-c1">&gt;=</span> <span class="pl-c1">36</span>:
+	<span class="pl-en">print</span>(<span class="pl-s">"<span class="pl-cce">\n</span>You're tall enough to ride"</span>)
+<span class="pl-k">else</span>:
+	<span class="pl-en">print</span>(<span class="pl-s">"<span class="pl-cce">\n</span>You'll be able to rede when you're a little older."</span>)</pre></div>
+<p>‍</p>
+<h3>求模运算符</h3>
+<p>求模运算符（%）是一个很有用的工具，它将两个数相除并返回余数</p>
+<p>教材中的用法是用来判断奇偶</p>
+<p>‍</p>
+<h3>while循环</h3>
+<p>可以使用while循环让用户选择何时退出</p>
+<p>关于 += 1的理解：</p>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">current_number</span> <span class="pl-c1">+=</span> <span class="pl-c1">1</span>
+(<span class="pl-s1">current_number</span> <span class="pl-c1">=</span> <span class="pl-s1">current_number</span> <span class="pl-c1">+</span> <span class="pl-c1">1</span>)</pre></div>
+<p>‍</p>
+<p>关于prompt += 这个的理解</p>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">prompt</span> <span class="pl-c1">=</span> <span class="pl-s">"If you tell us who you are, we can personalize the messages you see."</span>
+<span class="pl-s1">prompt</span> <span class="pl-c1">+=</span> <span class="pl-s">"<span class="pl-cce">\n</span>What is your first name? "</span>
+<span class="pl-c"># 意思就是在原来的基础上加上后面的这串字符</span>
+<span class="pl-c1">-</span><span class="pl-c1">-</span><span class="pl-c1">-</span><span class="pl-c1">-</span><span class="pl-c1">-</span><span class="pl-c1">-</span>
+<span class="pl-c1">-</span><span class="pl-c1">-</span><span class="pl-c1">-</span><span class="pl-c1">-</span><span class="pl-c1">-</span><span class="pl-c1">-</span>
+<span class="pl-v">If</span> <span class="pl-s1">you</span> <span class="pl-s1">tell</span> <span class="pl-s1">us</span> <span class="pl-s1">who</span> <span class="pl-s1">you</span> <span class="pl-s1">are</span>, <span class="pl-s1">we</span> <span class="pl-s1">can</span> <span class="pl-s1">personalize</span> <span class="pl-s1">the</span> <span class="pl-s1">messages</span> <span class="pl-s1">you</span> <span class="pl-s1">see</span>.  
+<span class="pl-v">What</span> <span class="pl-c1">is</span> <span class="pl-s1">your</span> <span class="pl-s1">first</span> <span class="pl-s1">name</span>? </pre></div>
+<p>‍</p>
+<p>使用标志</p>
+<p>在要求很多条件都满足才继续运行的程序中，可定义一个变量，用于判断整个程序是否处于活动状态。这个变量被称为标志​</p>
+<p>‍</p>
+<p>break语句可以立刻退出循环</p>
+<p>‍</p>
+<p>循环中使用continue：要返回到循环开头，并根据条件测试结果决定是否继续执行循环，可使用continue语句</p>
+<p>‍</p>
+<p>注意：在做练习的时候，我发现了我的一个易错点:<code class="notranslate">我在这里经常犯错的就是忘记把票价作为字符串显示</code>​</p>
+<p>‍</p>
+<p>‍</p>
+<p>字典：</p>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-c"># 创建一个空字典</span>
+<span class="pl-s1">my_dict</span> <span class="pl-c1">=</span> {}
+
+<span class="pl-c"># 将值存入字典</span>
+<span class="pl-s1">my_dict</span>[<span class="pl-s">"key1"</span>] <span class="pl-c1">=</span> <span class="pl-s">"value1"</span>
+<span class="pl-s1">my_dict</span>[<span class="pl-s">"key2"</span>] <span class="pl-c1">=</span> <span class="pl-s">"value2"</span>
+<span class="pl-s1">my_dict</span>[<span class="pl-s">"key3"</span>] <span class="pl-c1">=</span> <span class="pl-s">"value3"</span>
+
+<span class="pl-en">print</span>(<span class="pl-s1">my_dict</span>)
+
+{<span class="pl-s">'key1'</span>: <span class="pl-s">'value1'</span>, <span class="pl-s">'key2'</span>: <span class="pl-s">'value2'</span>, <span class="pl-s">'key3'</span>: <span class="pl-s">'value3'</span>}</pre></div>
+<p>‍</p>
+<h2>第八章 函数</h2>
+<h3>位置实参</h3>
+<p>就是你定义好形参之后，实参的排列位置按照形参的位置给定</p>
+<p>‍</p>
+<h3>关键字实参</h3>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">def</span> <span class="pl-en">describe_pet</span>(<span class="pl-s1">animal_type</span>, <span class="pl-s1">pet_name</span>): 
+    <span class="pl-s">"""显示宠物的信息"""</span> 
+    <span class="pl-en">print</span>(<span class="pl-s">"<span class="pl-cce">\n</span>I have a "</span> <span class="pl-c1">+</span> <span class="pl-s1">animal_type</span> <span class="pl-c1">+</span> <span class="pl-s">"."</span>) 
+    <span class="pl-en">print</span>(<span class="pl-s">"My "</span> <span class="pl-c1">+</span> <span class="pl-s1">animal_type</span> <span class="pl-c1">+</span> <span class="pl-s">"'s name is "</span> <span class="pl-c1">+</span> <span class="pl-s1">pet_name</span>.<span class="pl-en">title</span>() <span class="pl-c1">+</span> <span class="pl-s">"."</span>) 
+   
+<span class="pl-en">describe_pet</span>(<span class="pl-s1">animal_type</span><span class="pl-c1">=</span><span class="pl-s">'hamster'</span>, <span class="pl-s1">pet_name</span><span class="pl-c1">=</span><span class="pl-s">'harry'</span>)</pre></div>
+<p>关键字实参就不用考虑位置啦</p>
+<p>‍</p>
+<h3>默认值</h3>
+<p>默认值设定后，依然不影响形参的位置特性，所以，要么排序，要么给关键字</p>
+<p>‍</p>
+<h3>实参可选</h3>
+<p>设定可选实参的默认值为空字符串</p>
+<p>‍</p>
+<p>python将非空字符串解读为True</p>
+<p>‍</p>
+<h3>杂乱备注：</h3>
+<p>每次提示用户输入时，都应提供退出途径。</p>
+<p>‍</p>
+<p>在函数中对这个列表所作的任何修改都是永久性的</p>
+<p>‍</p>
+<p>编写函数时，如果你发现它执行的任务太多，请尝试将这些代码划分到两个函数中。别忘了，总是可以在一个函数中调用另一个函数，这有助于将复杂的任务划分成一系列的步骤。</p>
+<p>‍</p>
+<h3>禁止函数修改列表</h3>
+<p>有时候，需要禁止函数修改列表。</p>
+<p>为解决这个问题，可向函数传递列表的副本而不是原件；这样函数所做的任何修改都只影响副本，而丝毫不影响原件。</p>
+<p>但除非有充分的理由需要传递副本，否则还是应该将原始列表传递给函数，因为让函数使用现成列表可避免花时间和内存创建副本，从而提高效率，在处理大型列表时尤其如此。</p>
+<p>‍</p>
+<h3>传递任意数量的实参</h3>
+<p><code class="notranslate">*toppings</code>​</p>
+<p>将收到的值封装进元组，元组是不可以修改的</p>
+<p>‍</p>
+<h3>结合使用位置实参和任意数量实参</h3>
+<p>如果要让函数接受不同类型的实参，必须在函数定义中将接纳任意数量实参的形参放在最后。</p>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">def</span> <span class="pl-en">make_pizza</span>(<span class="pl-s1">size</span>, <span class="pl-c1">*</span><span class="pl-s1">toppings</span>):</pre></div>
+<p>‍</p>
+<h3>使用任意数量的关键字实参</h3>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">def</span> <span class="pl-en">build_profile</span>(<span class="pl-s1">first</span>, <span class="pl-s1">last</span>, <span class="pl-c1">**</span><span class="pl-s1">user_info</span>):</pre></div>
+<p>需要接受任意数量的实参，但预先不知道传递给函数的会是什么样的信息。</p>
+<p>将函数编写成能够接受任意数量的键—值对</p>
+<p>‍</p>
+<h3>将函数存贮在模块中</h3>
+<p>使用<code class="notranslate">import</code>​语句存入</p>
+<p>函数的优点之一是，使用它们可将代码块与主程序分离。</p>
+<p>你还可以更进一步，将函数存储在被称为模块的独立文件中，再将模块导入到主程序中。import语句允许在当前运行的程序文件中使用模块中的代码。</p>
+<p>‍</p>
+<p>导入特定的函数：</p>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">from</span> <span class="pl-s1">module_name</span> <span class="pl-k">import</span> <span class="pl-s1">function_name</span>
+<span class="pl-k">from</span> <span class="pl-s1">module_name</span> <span class="pl-k">import</span> <span class="pl-s1">function_0</span>, <span class="pl-s1">function_1</span>, <span class="pl-s1">function_2</span></pre></div>
+<p>‍</p>
+<p>如果导入的函数与现有程序冲突可使用<code class="notranslate">as</code>​给函数取个外号</p>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">from</span> <span class="pl-s1">pizza</span> <span class="pl-k">import</span> <span class="pl-s1">make_pizza</span> <span class="pl-k">as</span> <span class="pl-s1">mp</span></pre></div>
+<p>‍</p>
+<p>使用<code class="notranslate">as</code>​给模块指定别名：</p>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">pizza</span> <span class="pl-k">as</span> <span class="pl-s1">p</span></pre></div>
+<p>‍</p>
+<p>导入模块中的所有函数：使用<code class="notranslate">*</code>​号</p>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">from</span> <span class="pl-s1">pizza</span> <span class="pl-k">import</span> <span class="pl-c1">*</span></pre></div>
+<p>‍</p>
+<h3>做题记录：</h3>
+<p>在这里发现了一个问题，就是我把模块的作业新建了一个内层的文件夹，然后<code class="notranslate">import</code>​模块的时候无法正常运行，我把他们全部提取到上层的文件夹之后，可以正常<code class="notranslate">import</code>​了，什么原因？</p>
+<p>‍</p>
+<p>‍</p>
+<h2>第九章 类</h2>
+<p>根据类来创建对象被称为实例化</p>
+<p>在Python中，首字母大写的名称指的是类。</p>
+<p>类中的函数称为方法</p>
+<p>通过实例访问的变量称为属性。</p>
+<p>方法__init__()并未显式地包含return语句，但Python自动返回一个表示这条小狗的实例。</p>
+<p>我们通常可以认为首字母大写的名称（如Dog）指的是类，而小写的名称（如my_dog）指的是根据类创建的实例。</p>
+<p>‍</p>
+<p><strong>注意：初始的init前后需要使用双下划线！！！</strong></p>
+<p>‍</p>
+<p>修改属性的值（3种方法）：</p>
+<ol>
+<li>直接修改</li>
+<li>通过方法修改</li>
+<li>通过方法对属性递增</li>
+</ol>
+<p>‍</p>
+<p>继承：子类继承父类，并且还可以定义自己的属性和方法。</p>
+<p>‍今天终于完成了python从入门到实践的学习，后面两章实在是没耐心看了，开始做点新手项目玩一玩试试，积攒一点兴趣吧。<br>
+2024.1.24 23:00 end.</p>
+
+<p>‍</p></div>
+<div style="font-size:small;margin-top:8px;float:right;">转载请注明出处</div>
+<button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
+<div class="comments" id="comments"></div>
+</div>
+    <div id="footer">Copyright © <span id="year"></span><a href="https://tianya778.github.io"> Tianya's Createtime </a>
+<p>
+<span id="runday"></span>Powered by <a href="https://meekdai.com/Gmeek.html" target="_blank">Gmeek</a>
+</p>
+
+<script>
+if("04/15/2024"!=""){
+    var now=new Date();
+    var startSite=new Date("04/15/2024");
+    var diff=now.getTime()-startSite.getTime();
+    var diffDay=Math.floor(diff/(1000*60*60*24));
+    document.getElementById("year").innerHTML=now.getFullYear();
+    if(""!=""){document.getElementById("runday").innerHTML=" • "+"网站运行"+diffDay+"天"+" • ";}
+    else{document.getElementById("runday").innerHTML="网站运行"+diffDay+"天"+" • ";}
+}
+</script>
+</div>
+</body>
+<script>
+var IconList={'sun': 'M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z', 'moon': 'M9.598 1.591a.75.75 0 01.785-.175 7 7 0 11-8.967 8.967.75.75 0 01.961-.96 5.5 5.5 0 007.046-7.046.75.75 0 01.175-.786zm1.616 1.945a7 7 0 01-7.678 7.678 5.5 5.5 0 107.678-7.678z', 'sync': 'M1.705 8.005a.75.75 0 0 1 .834.656 5.5 5.5 0 0 0 9.592 2.97l-1.204-1.204a.25.25 0 0 1 .177-.427h3.646a.25.25 0 0 1 .25.25v3.646a.25.25 0 0 1-.427.177l-1.38-1.38A7.002 7.002 0 0 1 1.05 8.84a.75.75 0 0 1 .656-.834ZM8 2.5a5.487 5.487 0 0 0-4.131 1.869l1.204 1.204A.25.25 0 0 1 4.896 6H1.25A.25.25 0 0 1 1 5.75V2.104a.25.25 0 0 1 .427-.177l1.38 1.38A7.002 7.002 0 0 1 14.95 7.16a.75.75 0 0 1-1.49.178A5.5 5.5 0 0 0 8 2.5Z', 'home': 'M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z', 'github': 'M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z'};
+var utterancesLoad=0;
+
+let themeSettings={
+    "dark": ["dark","moon","#00f0ff","dark-blue"],
+    "light": ["light","sun","#ff5000","github-light"],
+    "auto": ["auto","sync","","preferred-color-scheme"]
+};
+function changeTheme(mode, icon, color, utheme){
+    document.documentElement.setAttribute("data-color-mode",mode);
+    document.getElementById("themeSwitch").setAttribute("d",value=IconList[icon]);
+    document.getElementById("themeSwitch").parentNode.style.color=color;
+    if(utterancesLoad==1){utterancesTheme(utheme);}
+}
+function modeSwitch(){
+    let currentMode=document.documentElement.getAttribute('data-color-mode');
+    let newMode = currentMode === "light" ? "dark" : currentMode === "dark" ? "auto" : "light";
+    localStorage.setItem("meek_theme", newMode);
+    if(themeSettings[newMode]){
+        changeTheme(...themeSettings[newMode]);
+    }
+}
+function utterancesTheme(theme){
+    const message={type:'set-theme',theme: theme};
+    const iframe=document.getElementsByClassName('utterances-frame')[0];
+    iframe.contentWindow.postMessage(message,'https://utteranc.es');
+}
+if(themeSettings[theme]){changeTheme(...themeSettings[theme]);}
+console.log("\n %c Gmeek last https://github.com/Meekdai/Gmeek \n\n","padding:5px 0;background:#02d81d;color:#fff");
+</script>
+
+<script>
+document.getElementById("pathHome").setAttribute("d",IconList["home"]);
+document.getElementById("pathIssue").setAttribute("d",IconList["github"]);
+
+function openComments(){
+    cm=document.getElementById("comments");
+    cmButton=document.getElementById("cmButton");
+    cmButton.innerHTML="loading";
+    span=document.createElement("span");
+    span.setAttribute("class","AnimatedEllipsis");
+    cmButton.appendChild(span);
+
+    script=document.createElement("script");
+    script.setAttribute("src","https://utteranc.es/client.js");
+    script.setAttribute("repo","tianya778/tianya778.github.io");
+    script.setAttribute("issue-term","title");
+    
+    if(localStorage.getItem("meek_theme")=="dark"){script.setAttribute("theme","dark-blue");}
+    else if(localStorage.getItem("meek_theme")=="light") {script.setAttribute("theme","github-light");}
+    else{script.setAttribute("theme","preferred-color-scheme");}
+    
+    script.setAttribute("crossorigin","anonymous");
+    script.setAttribute("async","");
+    cm.appendChild(script);
+
+    int=self.setInterval("iFrameLoading()",200);
+}
+
+function iFrameLoading(){
+    var utterances=document.getElementsByClassName('utterances');
+    if(utterances.length==1){
+        if(utterances[0].style.height!=""){
+            utterancesLoad=1;
+            int=window.clearInterval(int);
+            document.getElementById("cmButton").style.display="none";
+            console.log("utterances Load OK");
+        }
+    }
+}
+</script>
+
+
+
+</html>
