@@ -1,27 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Tianya's Createtime</title><link>https://tianya778.github.io</link><description>未经反思的人生是不值得过的。</description><copyright>Tianya's Createtime</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://tianya778.github.io</link></image><lastBuildDate>Mon, 15 Apr 2024 07:12:16 +0000</lastBuildDate><managingEditor>Tianya's Createtime</managingEditor><ttl>60</ttl><webMaster>Tianya's Createtime</webMaster><item><title>周报#6 追梦之路</title><link>https://tianya778.github.io/post/zhou-bao-%236%20-zhui-meng-zhi-lu.html</link><description>本篇是对`2024-3-16`到`2024-3-28`的有意思的事情的记录与分享&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Tianya's Createtime</title><link>https://tianya778.github.io</link><description>未经反思的人生是不值得过的。</description><copyright>Tianya's Createtime</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://tianya778.github.io</link></image><lastBuildDate>Mon, 15 Apr 2024 07:18:28 +0000</lastBuildDate><managingEditor>Tianya's Createtime</managingEditor><ttl>60</ttl><webMaster>Tianya's Createtime</webMaster><item><title>周报#6 追梦之路</title><link>https://tianya778.github.io/post/zhou-bao-%236%20-zhui-meng-zhi-lu.html</link><description>本篇是对`2024-3-16`到`2024-3-28`的有意思的事情的记录与分享&#13;
 &#13;
 ## 本周记事&#13;
 想了一想，既然现在暂时没什么牵挂，那就冲一把吧兄弟！！！&#13;
-讲中国文化要略的国家玮老师讲的不错，以后可以多看看他的课程。</description><guid isPermaLink="true">https://tianya778.github.io/post/zhou-bao-%236%20-zhui-meng-zhi-lu.html</guid><pubDate>Mon, 15 Apr 2024 07:06:41 +0000</pubDate></item><item><title>python编程——从入门到实践笔记</title><link>https://tianya778.github.io/post/python-bian-cheng-%E2%80%94%E2%80%94-cong-ru-men-dao-shi-jian-bi-ji.html</link><description>## 第二章 变量和简单数据类型&#13;
-&#13;
-‍&#13;
-&#13;
-### 变量的命名和使用注意事项：&#13;
-&#13;
-* 慎用小写字母l和大写字母O,因为容易被看错成数字&#13;
-* 变量名中，最好避免使用大写字母&#13;
-&#13;
-‍&#13;
-&#13;
-变量错误通常意味着两种情况：&#13;
-&#13;
-1. 要么是使用变量前忘记赋值&#13;
-2. 要么就是输入变量名字的时候拼写不正确&#13;
-&#13;
-‍&#13;
-&#13;
-在做p23页的动手练习的时候，发现vscode的shift + enter运行代码会报错，需要放到命令行里面去运行才正常，额，先随着它吧。</description><guid isPermaLink="true">https://tianya778.github.io/post/python-bian-cheng-%E2%80%94%E2%80%94-cong-ru-men-dao-shi-jian-bi-ji.html</guid><pubDate>Mon, 15 Apr 2024 06:59:12 +0000</pubDate></item><item><title>启笔</title><link>https://tianya778.github.io/post/qi-bi.html</link><description>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;这个博客的搭建其实出于一个误会：我误以为由于我的博客的文章中一些有些不恰当的内容被清退，于是我开始思考，博客到底是写给谁看的？&lt;br&gt;&#13;
+讲中国文化要略的国家玮老师讲的不错，以后可以多看看他的课程。</description><guid isPermaLink="true">https://tianya778.github.io/post/zhou-bao-%236%20-zhui-meng-zhi-lu.html</guid><pubDate>Mon, 15 Apr 2024 07:06:41 +0000</pubDate></item><item><title>启笔</title><link>https://tianya778.github.io/post/qi-bi.html</link><description>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;这个博客的搭建其实出于一个误会：我误以为由于我的博客的文章中一些有些不恰当的内容被清退，于是我开始思考，博客到底是写给谁看的？&lt;br&gt;&#13;
 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;我感觉之前的博客对我来说是一种束缚，所以我决定重新开始，开始没有任何束缚的创作。</description><guid isPermaLink="true">https://tianya778.github.io/post/qi-bi.html</guid><pubDate>Mon, 15 Apr 2024 04:39:47 +0000</pubDate></item><item><title>周报#5 大杂烩</title><link>https://tianya778.github.io/post/zhou-bao-%235%20-da-za-hui.html</link><description>本篇是对`2024-1-28`到`2024-3-15`的有意思的事情的记录与分享&#13;
 &#13;
 ## 记事：&#13;
@@ -62,4 +44,22 @@
 &gt;&#13;
 &gt; 备注：&lt;br /&gt;制造业转移的起因是什么？除了发展阶段的规律，有没有其他的？&#13;
 &#13;
-&gt; 其实所谓民主国家都有短视主义的毛病，《理性选民的神话》也许想不到今天能直升机撒钱，无知即力量。</description><guid isPermaLink="true">https://tianya778.github.io/post/zhou-bao-%20%231%20-wo-de-zhou-bao-chu-chang-shi.html</guid><pubDate>Fri, 01 Dec 2023 10:12:20 +0000</pubDate></item></channel></rss>
+&gt; 其实所谓民主国家都有短视主义的毛病，《理性选民的神话》也许想不到今天能直升机撒钱，无知即力量。</description><guid isPermaLink="true">https://tianya778.github.io/post/zhou-bao-%20%231%20-wo-de-zhou-bao-chu-chang-shi.html</guid><pubDate>Fri, 01 Dec 2023 10:12:20 +0000</pubDate></item><item><title>python编程——从入门到实践笔记</title><link>https://tianya778.github.io/post/python-bian-cheng-%E2%80%94%E2%80%94-cong-ru-men-dao-shi-jian-bi-ji.html</link><description>## 第二章 变量和简单数据类型&#13;
+&#13;
+‍&#13;
+&#13;
+### 变量的命名和使用注意事项：&#13;
+&#13;
+* 慎用小写字母l和大写字母O,因为容易被看错成数字&#13;
+* 变量名中，最好避免使用大写字母&#13;
+&#13;
+‍&#13;
+&#13;
+变量错误通常意味着两种情况：&#13;
+&#13;
+1. 要么是使用变量前忘记赋值&#13;
+2. 要么就是输入变量名字的时候拼写不正确&#13;
+&#13;
+‍&#13;
+&#13;
+在做p23页的动手练习的时候，发现vscode的shift + enter运行代码会报错，需要放到命令行里面去运行才正常，额，先随着它吧。</description><guid isPermaLink="true">https://tianya778.github.io/post/python-bian-cheng-%E2%80%94%E2%80%94-cong-ru-men-dao-shi-jian-bi-ji.html</guid><pubDate>Sun, 26 Nov 2023 15:07:23 +0000</pubDate></item></channel></rss>
